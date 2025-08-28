@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h2>Book Travel Option</h2>
+<div class="card p-3">
+    <h5>{{ travel.type }}: {{ travel.From }} → {{ travel.To }}</h5>
+    <p>Date & Time: {{ travel.date_time }}</p>
+    <p>Price per seat: {{ travel.price }}</p>
+    <p>Available seats: {{ travel.available_seats }}</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="seats">Number of Seats</label>
+            <input type="number" name="seats" class="form-control" min="1" max="{{ travel.available_seats }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Confirm Booking</button>
+    </form>
+</div>
+{% endblock %}
+
