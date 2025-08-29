@@ -76,7 +76,7 @@ WSGI_APPLICATION = "travel_booking.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'travel_db',
+        'NAME': 'rat0211$travel_db',
         'USER': 'rat0211',
         'PASSWORD': 'admin',
         'HOST':'rat0211.mysql.pythonanywhere-services.com',
