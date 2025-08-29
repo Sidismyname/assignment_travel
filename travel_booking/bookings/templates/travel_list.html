@@ -5,10 +5,10 @@
 <!-- Filter Form -->
 <form method="GET" class="row mb-4">
     <div class="col-md-3">
-        <input type="text" name="source" class="form-control" placeholder="Source" value="{{ request.GET.source }}">
+        <input type="text" name="From" class="form-control" placeholder="From" value="{{ request.GET.From }}">
     </div>
     <div class="col-md-3">
-        <input type="text" name="destination" class="form-control" placeholder="Destination" value="{{ request.GET.destination }}">
+        <input type="text" name="To" class="form-control" placeholder="To" value="{{ request.GET.To }}">
     </div>
     <div class="col-md-3">
         <select name="type" class="form-control">
@@ -28,8 +28,8 @@
     <thead>
         <tr>
             <th>Type</th>
-            <th>Source</th>
-            <th>Destination</th>
+            <th>From</th>
+            <th>To</th>
             <th>Date & Time</th>
             <th>Price</th>
             <th>Seats</th>
@@ -40,8 +40,8 @@
         {% for travel in travels %}
         <tr>
             <td>{{ travel.type }}</td>
-            <td>{{ travel.To }}</td>
             <td>{{ travel.From }}</td>
+            <td>{{ travel.To }}</td>
             <td>{{ travel.date_time }}</td>
             <td>{{ travel.price }}</td>
             <td>{{ travel.available_seats }}</td>
