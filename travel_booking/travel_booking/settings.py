@@ -79,7 +79,7 @@ DATABASES = {
         'NAME': 'travel_db',
         'USER': 'root',
         'PASSWORD': 'admin',
-        'HOST':'localhost',
+        'HOST':'rat0211.mysql.pythonanywhere-services.com',
         'PORT':'3306',
     }
 }
